@@ -1,0 +1,32 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity testbench is 
+end testbench;
+
+architecture rtl of testbench is
+
+-- Declaring component to test
+	component proc is
+		generic (
+			 -- 16 bit data
+			 RAM_WIDTH : integer := 16;
+			 RAM_DEPTH : integer := 32
+		  );
+		port(
+		 clk : in std_logic;
+		 rst : in std_logic;
+		 
+		 -- Write to imem
+		 wr_en_IMEM : in std_logic;
+		 wr_data_IMEM : in std_logic_vector(RAM_WIDTH - 1 downto 0);
+		 
+		 -- Read from dmem
+		 rd_en_DMEM : in std_logic;
+		 rd_valid_DMEM : out std_logic;
+		 rd_data_DMEM : out std_logic_vector(RAM_WIDTH - 1 downto 0)
+		);
+	end component;
+
+end architecture;
