@@ -9,5 +9,5 @@ memory.
 The data and instruction memory are implemeted as a [ring buffer](src/ring_buffer.vhd). As a result, there are no addresses; reads are done from the top and writes are done at the bottom of the queue. 
 
 
-You are free to modify the testbench to test your design. During evaluation, a mpodified testbench that contains a hidden sequence of instructions will be used and evaluation will be done on the 
-contents of the data memory will be examined.  
+You are free to modify the testbench to test your design. During evaluation, a modified testbench that contains a hidden sequence of instructions will be used and evaluation will be done on the 
+contents of the data memory.  
